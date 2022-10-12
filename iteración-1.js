@@ -2,24 +2,54 @@
 // dinámicamente en el html que imprima cada uno de los paises.
 // const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
 
+const ul$$ = document.createElement('ul');
+const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
+for (const country of countries) {
+    let li$$ = document.createElement('li');
+    li$$.textContent = country;
+    ul$$.appendChild(li$$);
+}
+document.body.appendChild(ul$$);
+
 // 1.2 Elimina el elemento que tenga la clase .fn-remove-me.
 
-// 1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos 
+const removeElement$$ = document.querySelector('.fn-remove-me');
+removeElement$$.remove();
+
+// 1.3 Utiliza el array para crear dinamicamente una lista ul > 
+// li de elementos 
 // en el div de html con el atributo data-function="printHere".
-// const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
 
-// 1.4 Crea dinamicamente en el html una lista de div que contenga un elemento 
-// h4 para el titulo y otro elemento img para la imagen.
-// const countries = [
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
-// 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
-// ];
+const ul1$$ = document.createElement('ul');
+const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola']
+for (const car of cars) {
+    let li1$$ = document.createElement('li');
+    li1$$.textContent = car;
+    ul1$$.appendChild(li1$$);  
+}
+const divHtml$$ = document.querySelector('[data-function="printHere"]');
+divHtml$$.appendChild(ul1$$);
 
-// 1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último 
-// elemento de la lista.
+// 1.4 Crea dinamicamente en el html una lista de div que contenga 
+// un elemento h4 para el titulo y otro elemento img para la imagen.
+
+const countries2 = [
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=3'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
+	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
+];
+const listOfDiv$$ = document.createElement('ul');
+for (const country2 of countries2) {
+    let countryItems$$ = document.createElement('div');
+    let h4$$ = document.createElement('h4');
+    let img$$ = document.createElement('img');
+
+}
+
+// 1.5 Basandote en el ejercicio anterior. Crea un botón que 
+// elimine el último elmento de la lista.
 
 // 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 // elementos de las listas que elimine ese mismo elemento del html.
