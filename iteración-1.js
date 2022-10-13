@@ -51,6 +51,7 @@ for (const country2 of countries2) {
 
     let img$$ = document.createElement('img');
     img$$.src = country2.imgUrl;
+    // img$$.setAttribute("src", country.imgUrl);
 
     countryItems$$.appendChild(h4$$);
     countryItems$$.appendChild(img$$);
@@ -61,6 +62,17 @@ for (const country2 of countries2) {
 // 1.5 Basandote en el ejercicio anterior. Crea un botón que 
 // elimine el último elmento de la lista.
 
+const button$$ = document.createElement('button');
+function eliminarUltimo () {
+
+    const divs$$ = document.querySelectorAll('div');
+    divs$$[divs$$.length - 1].remove();
+}
+button$$.addEventListener('click', eliminarUltimo);
+button$$.textContent = "Eliminar";
+
+
 // 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 // elementos de las listas que elimine ese mismo elemento del html.
+
 
