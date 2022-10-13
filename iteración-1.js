@@ -41,11 +41,21 @@ const countries2 = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ];
 const listOfDiv$$ = document.createElement('ul');
-for (const country2 of countries2) {
-    let countryItems$$ = document.createElement('div');
-    let h4$$ = document.createElement('h4');
-    let img$$ = document.createElement('img');
 
+for (const country2 of countries2) {
+
+    let countryItems$$ = document.createElement('div');
+
+    let h4$$ = document.createElement('h4');
+    h4$$.textContent = country2.title;
+
+    let img$$ = document.createElement('img');
+    img$$.src = country2.imgUrl;
+
+    countryItems$$.appendChild(h4$$);
+    countryItems$$.appendChild(img$$);
+
+    document.body.appendChild(countryItems$$);
 }
 
 // 1.5 Basandote en el ejercicio anterior. Crea un botón que 
