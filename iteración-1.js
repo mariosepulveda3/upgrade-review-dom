@@ -75,4 +75,20 @@ button$$.textContent = "Eliminar";
 // 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los 
 // elementos de las listas que elimine ese mismo elemento del html.
 
+for (const country of countries) {
+    let createCountryItem = document.createElement("div");
+    createCountryItem.innerHTML = `<h4>${country.title}</h4><img src=${country.imgUrl} />`;
+  
+    let deleteButton = document.createElement("button");
+    deleteButton.textContent = "Remove";
+  
+    createCountryItem.appendChild(deleteButton);
+  
+    deleteButton.addEventListener("click", function () {
+      createCountryItem.remove();
+    });
+  
+    document.body.appendChild(createCountryItem);
+  }
+
 
